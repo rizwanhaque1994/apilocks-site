@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>apilocks</title>
+  
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: Reveal
+    Theme URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body id="body">
+
+  <!--==========================
+    Top Bar
+  ============================-->
+  <section id="topbar" class="d-none d-lg-block">
+    <div class="container clearfix">
+      <div class="contact-info float-left">
+        <i class="fa fa-envelope-o"></i> <a href="mailto:support@apilocks.com">support@apilocks.com</a>
+      </div>
+      <div class="social-links float-right">
+        <a href="profile.html" class="menu-active"> Profile <i class="fa fa-user fa-2x"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="#body" class="scrollto">api<span>locks</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="home.html">All active user</a></li>
+          <li ><a href="alluser.html">All user</a></li>
+           <li ><a href="deactive.html">All deactive user</a></li>
+           <li ><a href="adduser.html">Add user</a></li>
+          <li><a href="login.html" onclick="return confirm('are you sure you want to log out?')">logout</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+    <!--==========================
+      login Section
+    ============================-->
+    <br>
+    <br>
+    <br>
+    <section id="team" class="wow fadeInUp">
+      <div class="container">
+        <div  id="show" style="display: none;">
+           <h4>change profile image</h4>
+           <input type="file" id="file">
+            <input type="button" id="imgupload" value="Update">
+           <br>
+            <br>
+         </div>
+         <div  id="hide" style="display: none;">
+           <h4>Change  password</h4>
+           <label>Old Password</label>
+           <input type="text" id="oldpass"><br>
+           <label>New Password</label>
+           <input type="text" id="newpass"><br>
+           <label>Confirm Password</label>
+           <input type="text" id="confpass"><span id='valid'></span><br>
+            <input type="button" id="chanpass" value="Change">
+           <br>
+            <br>
+         </div>
+        <div class="section-header">
+          <h2>profile details</h2>
+        </div>
+        <div class="row">
+        <div class="col-lg-3 col-md-1">
+            <div class="member">
+              <div class="details" id="profileedit"><button style="border-color:#0c2e8a; background-color: #0c2e8a; color: white;">Change</button></div>
+              <div class="details" id="changepic"></div>
+              <div class="details">
+                
+              </div>
+            </div>
+        </div>
+            <div class="col-lg-6 col-md-11" >
+              <!--  <div class="member"> -->
+              <div class="details" id="probody" align="left">
+                <button id="changepass" style="border-color:#0c2e8a; background-color: #0c2e8a; color: white;" >Change Password</button>
+              </div>
+            <!-- </div> -->
+            </div>
+        </div>
+         
+        
+    </div>
+  <form action="profile.html" id="submit">
+    
+  </form>
+    </section><!-- #contact -->
+
+
+  <!--==========================
+    Footer
+  ============================-->
+  
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+  <script src="lib/sticky/sticky.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.5.1/firebase.js"></script>
+  <script language="JavaScript">
+  var myData = localStorage['objectToPass'];
+  console.log(myData);
+   if (myData=="ok") {
+    window.location = "https://apilocks.com/login.html";
+  }
+   var config = {
+    apiKey: "AIzaSyCGySJf2o5FE1ROmv-CYinDdLREffHjutA",
+    authDomain: "apilocks4584.firebaseapp.com",
+    databaseURL: "https://apilocks4584.firebaseio.com",
+    projectId: "apilocks4584",
+    storageBucket: "apilocks4584.appspot.com",
+    messagingSenderId: "338687853980"
+  };
+  
+  firebase.initializeApp(config);
+  var y = document.getElementById("hide");
+  var x = document.getElementById("show");
+
+    var reff = firebase.database().ref('db');
+                reff.on('value',haveData, haveerr);
+                function haveData(datahave){
+                 var existval= datahave.val();
+                 var chabi=Object.keys(existval);
+                 var td=""; 
+                 var cname="";
+                 for(var d2=0;d2< chabi.length;d2++){
+                    var r=chabi[d2];
+                     var exitval3=existval[r].dbname;
+                     if (exitval3==myData) {
+                       var exitval=existval[r].Email;
+                       var exitval2=existval[r].company;
+                       var exitval3=existval[r].Name;
+                       var exitval4=existval[r].password;
+                       td += '<h3><strong>Name</strong> : '+exitval3+'</h3><h3><strong>Email</strong> : '+exitval+'</h3><h3><strong>Company</strong> : '+exitval2+'</h3>';
+                     }
+                   
+                    
+                     
+                }
+                  if(td != "")
+                  {
+                     $("#probody").append(td);
+                  }
+
+
+
+              }
+
+         function haveerr(e){
+         
+         console.log(e);
+         
+            }
+
+            $('#newpass, #confpass').on('keyup', function () {
+  if ($('#newpass').val() == $('#confpass').val()) {
+    $('#valid').html('Matching').css('color', 'green');
+    document.getElementById("chanpass").addEventListener("click", function(){
+      var confpass=document.getElementById("confpass").value;
+      console.log(confpass);
+      y.style.display = "none";
+    firebase.database().ref("db/"+myData).update({ 
+      password: confpass
+       });
+
+  });
+  } else 
+    $('#valid').html('Not Matching').css('color', 'red');
+});
+  document.getElementById("profileedit").addEventListener("click", function(){
+    x.style.display = "block";
+
+  });
+  document.getElementById("changepass").addEventListener("click", function(){
+    y.style.display = "block";
+
+  });
+
+  
+
+  
+
+
+
+
+ document.getElementById("imgupload").addEventListener("click", function(){
+    x.style.display = "none";
+
+ 
+   //Step 1 : Defining element to show the progress
+           
+        var filetoUpload=document.getElementById("file").files[0];
+        console.log(filetoUpload);
+        //Step 2 : Initializing the reference of database with the filename
+        var storageRef = firebase.storage().ref(filetoUpload.name);
+        //Step 3 : Uploading file
+         var task = storageRef.put(filetoUpload);
+        
+        //Step 4 : sata_changed Event
+         // state_changed events occures when file is getting uploaded 
+         //(Note : when we want to show the progress what's the uploading status that time we will use this function.)
+     
+
+         task.on('state_changed',
+            function progress(snapshot){
+                var percentage = snapshot.bytesTransferred / snapshot.totalBytes * 100;
+                //uploader.value = percentage;
+            },
+            function error(err){
+
+            },
+            function complete(){
+                 downloadURL = task.snapshot.downloadURL;
+        console.log(downloadURL);
+       
+        //console.log(sdsd);
+         firebase.database().ref("images/"+myData).set({
+            url:downloadURL,
+            dbname:myData
+
+        }); 
+         document.getElementById("submit").submit();
+            }
+        );
+
+});
+
+  var reff = firebase.database().ref('images');
+                reff.on('value',ddData, herr);
+                function ddData(datahavee){
+                 var existval= datahavee.val();
+                 var chabi=Object.keys(existval);
+                 var url=""; 
+                 for(var d2=0;d2< chabi.length;d2++){
+                    var r=chabi[d2];
+                     var exitval=existval[r].url;
+                     var exitval2=existval[r].dbname;
+                     if (exitval2==myData) {
+                    url += '<img src="'+exitval+'" style="width: 190px; height: 210px;">'
+                     }
+                }
+                  if(url != "")
+                  {
+                     $("#changepic").append(url);
+                     //
+                  }
+
+
+
+              }
+
+         function herr(e){
+         
+         console.log(e);
+         
+            }
+</script>
+
+</body>
+</html>

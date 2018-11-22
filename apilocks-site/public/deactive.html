@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>apilocks</title>
+  
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+     <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link href="css/style.css" rel="stylesheet">
+   <script src="sorttable.js"></script>
+  <!-- =======================================================
+    Theme Name: Reveal
+    Theme URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body id="body">
+
+  <!--==========================
+    Top Bar
+  ============================-->
+  <section id="topbar" class="d-none d-lg-block">
+    <div class="container clearfix">
+      <div class="contact-info float-left">
+        <i class="fa fa-envelope-o"></i> <a href="mailto:support@apilocks.com">support@apilocks.com</a>
+      </div>
+      <div class="social-links float-right">
+         <a href="profile.html"> Profile <i class="fa fa-user fa-2x"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="#body" class="scrollto">api<span>locks</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li  ><a href="home.html">All active user</a></li>
+          <li><a href="alluser.html">All user</a></li>
+           <li class="menu-active"><a href="deactive.html">All deactive user</a></li>
+           <li ><a href="adduser.html">Add user</a></li>
+          <li><a href="login.html" onclick="return confirm('are you sure you want to log out?')">logout</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+    <!--==========================
+      login Section
+    ============================-->
+    <br>
+    <br>
+    <br>
+    <section id="login" class="wow fadeInUp">
+      <div class="container">
+        <div class="container" style="display: block;" id="hide">
+  <h1>Table for view status all user </h1>
+   <div id="wrapper">
+    <div id="c1"><ul>
+    <li>Show all deactive user</li> 
+    <li>After expiry date end  automatically add  this page.</li> 
+  </ul></div>
+    <div id="c2">
+      <ul>
+        <li>Search between two date<img title="please select start date 1 " src="img/qq.png" width="20" height="20" style="float:right; cursor: help;"></li>
+        <li>start date <input type="date" id="sdate">End date <input type="date" id="ndate"> <button id="Search">Search</button></li> 
+      </ul>
+      <div id="snackbar" style="display: none;">please select date.</div>
+    </div>
+</div>​
+  
+  <div id="table" class="table-editable">
+   
+    <table class="sortable" id="tablea">
+      <tr>
+        <th  class="row-1 row-ID">Email</th>
+        <th  class="row-2 row-name">Plugin Name</th>
+        <th class="row-3 row-job">API</th>
+        <th class="row-4 row-email">Deactive date(dd-mm-yyyy)</th>
+    <!-- <th>Remove</th>
+    <th>Arrange</th> -->
+      </tr>
+     <!--  <tr>
+    <td contenteditable="true">show mail</td>
+    <td contenteditable="true">show domain</td>
+    <td contenteditable="true">show base name</td>
+    <td contenteditable="true">Expair date</td>
+    <td contenteditable="true">API</td>
+        <td>
+          <span class="table-remove glyphicon glyphicon-remove"></span>
+        </td>
+        <td>
+          <span class="table-up glyphicon glyphicon-arrow-up"></span>
+          <span class="table-down glyphicon glyphicon-arrow-down"></span>
+        </td>
+      </tr> -->
+
+      <!-- This is our clonable table line -->
+    </table>
+  </div>
+  
+  <button id="export-btn" class="btn btn-primary" style="display: none;">Export Data</button>
+  <p id="export"></p>
+  <button id="btnExport"  class="btn btn-primary" onclick="javascript:xport.toCSV('tablea');"> Export to CSV</button>
+</div>
+  
+      </div>
+    </section><!-- #contact -->
+
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+  <script src="lib/sticky/sticky.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+    <script  src="js1/index.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.5.1/firebase.js"></script>
+  <script>
+  var myData = localStorage['objectToPass'];
+  console.log(myData);
+   if (myData=="ok") {
+    window.location = "https://apilocks.com/login.html";
+  }
+  var config = {
+    apiKey: "AIzaSyCGySJf2o5FE1ROmv-CYinDdLREffHjutA",
+    authDomain: "apilocks4584.firebaseapp.com",
+    databaseURL: "https://apilocks4584.firebaseio.com",
+    projectId: "apilocks4584",
+    storageBucket: "apilocks4584.appspot.com",
+    messagingSenderId: "338687853980"
+  };
+  
+   firebase.initializeApp(config);
+  // var y = document.getElementById("hide");
+  // var x = document.getElementById("show");
+
+
+  var reff = firebase.database().ref(myData+'/inactive');
+                reff.on('value',haveData, haveerr);
+                function haveData(datahave){
+                 var existval= datahave.val();
+                 var chabi=Object.keys(existval);
+                 var td=""; 
+                 for(var d2=0;d2< chabi.length;d2++){
+                    var r=chabi[d2];
+                     var exitval=existval[r].Email;
+                     var exitval2=existval[r].Plugin;
+                     var exitval4=existval[r].Api;
+                     var month=existval[r].mm;
+                     var year=existval[r].Year
+                     var day=existval[r].dd;
+                     var exitval5=day+'-'+month+'-'+year;
+                    td += '<tr><td contenteditable="true">'+exitval+'</td><td contenteditable="true">'+exitval2+'</td><td contenteditable="true">'+exitval4+'</td> <td>'+exitval5+'</td></tr>';
+                     
+                }
+                  if(td != "")
+                  {
+                     $("#tablea").append(td);
+                  }
+
+
+
+              }
+
+         function haveerr(e){
+         
+         console.log(e);
+         
+            }
+
+
+             document.getElementById("Search").addEventListener("click", function(){
+                      
+                       var sdate=document.getElementById("sdate").value;
+                       var ndate=document.getElementById("ndate").value;
+                        var x = document.getElementById("snackbar");
+                       if (sdate=="" || ndate=="") {
+                           x.style.display = "block";
+                       }else{
+                         x.style.display = "none";
+                        $("#tablea").find("tr:gt(0)").remove();
+                       console.log(ndate);
+                        var bdate= new Date(sdate);
+                         var syear = bdate.getFullYear();
+                         var smonth = bdate.getMonth()+1;
+                         var sday = bdate.getDate();
+                         var ddate= new Date(ndate);
+                         var nyear = ddate.getFullYear();
+                         var nmonth = ddate.getMonth()+1;
+                         var nday = ddate.getDate();
+                       var reff = firebase.database().ref('security');
+                   var reff = firebase.database().ref(myData+'/inactive');
+                reff.on('value',haveData, haveerr);
+                function haveData(datahave){
+                 var existval= datahave.val();
+                 var chabi=Object.keys(existval);
+                 var td=""; 
+                 for(var d2=0;d2< chabi.length;d2++){
+                    var r=chabi[d2];
+                     var exitval=existval[r].Email;
+                     var exitval2=existval[r].Plugin;
+                     var exitval4=existval[r].Api;
+                     var month=existval[r].mm;
+                     var year=existval[r].Year
+                     var day=existval[r].dd;
+                     var exitval5=day+'-'+month+'-'+year;
+                      if (syear<=year && smonth<=month && sday<=day && nyear>=year && nmonth>=month && nday>=day) {
+                    td += '<tr><td contenteditable="true">'+exitval+'</td><td contenteditable="true">'+exitval2+'</td><td contenteditable="true">'+exitval4+'</td> <td>'+exitval5+'</td></tr>';
+                     }
+                }
+                  if(td != "")
+                  {
+                     $("#tablea").append(td);
+                  }
+
+
+
+              }
+
+         function haveerr(e){
+         
+         console.log(e);
+         
+            }
+
+        }
+                        
+    });
+
+ 
+  
+</script>
+
+</body>
+</html>

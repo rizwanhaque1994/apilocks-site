@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>apilocks</title>
+  
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: Reveal
+    Theme URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body id="body">
+
+  <!--==========================
+    Top Bar
+  ============================-->
+  <section id="topbar" class="d-none d-lg-block">
+    <div class="container clearfix">
+      <div class="contact-info float-left">
+        <i class="fa fa-envelope-o"></i> <a href="mailto:support@apilocks.com">support@apilocks.com</a>
+       <!--  <i class="fa fa-phone"></i> +91 -->
+      </div>
+      <div class="social-links float-right">
+       <!--  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a> -->
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="#body" class="scrollto">api<span>locks</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li ><a href="index.html">Home</a></li>
+          
+          <li class="menu-active"><a href="login.html">Login</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+    <!--==========================
+      login Section
+    ============================-->
+    <br>
+    <br>
+    <br>
+    <section id="login" class="wow fadeInUp">
+      <div class="container">
+        <div class="form">
+          <div id="sendmessage">Please give your user ID and password</div>
+          <div id="errormessage">only member can login here</div>
+         
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="password" class="form-control" name="password" id="pass" placeholder="Your password" data-rule="minlen:4" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+            </div>
+            <div class=""><button type="submit" id="sss">login</button></div>
+             <form action="home.html" id="myForm" method="get">
+           </form>
+        </div>
+
+      </div>
+    </section><!-- #contact -->
+
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+  <script src="lib/sticky/sticky.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.5.1/firebase.js"></script>
+  <script>
+   var config = {
+    apiKey: "AIzaSyCGySJf2o5FE1ROmv-CYinDdLREffHjutA",
+    authDomain: "apilocks4584.firebaseapp.com",
+    databaseURL: "https://apilocks4584.firebaseio.com",
+    projectId: "apilocks4584",
+    storageBucket: "apilocks4584.appspot.com",
+    messagingSenderId: "338687853980"
+  };
+  localStorage.setItem( 'objectToPass', 'ok' );
+   firebase.initializeApp(config);
+  
+  document.getElementById("sss").addEventListener("click", function(){
+    var passworddb =  document.getElementById('pass').value;
+    var email =  document.getElementById('email').value;
+    var dbpass;
+    var dbemail;
+    
+     var dbdata=firebase.database().ref('db');
+
+    dbdata.on('value', Dbdata, Dberror);
+    function Dbdata(bdval){
+       var rr1= bdval.val();
+       console.log(rr1);
+        var rr2=Object.keys(rr1);
+        var i;
+        for(var z1=0;z1< rr2.length;z1++){
+          var rr3=rr2[z1];
+          var val1=rr1[rr3].password;
+          var val2=rr1[rr3].dbname;
+          var val3=rr1[rr3].Email;
+          //console.log(val3);
+          if ( email==val3 && passworddb==val1) {
+              dbpass=val2;
+                var firstData = dbpass;
+                localStorage.setItem( 'objectToPass', firstData );
+                localStorage.setItem( 'emailTopass', val3 );
+              //document.getElementById("data").value=dbpass;
+              var form=document.getElementById("myForm");
+              form.action='home.html';
+              form.submit();
+              i=0;
+            break;
+          }else{
+            localStorage.setItem( 'objectToPass', 'ok' );
+            i=1;
+          }
+        }
+        if (i==1) {
+          alert("Your user id and password is incorrect");
+
+        }
+    }
+     function Dberror(ee){
+ 
+    console.log("error");
+ 
+    }
+
+    
+});
+</script>
+
+
+</body>
+</html>

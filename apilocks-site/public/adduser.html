@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>apilocks</title>
+  
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+   (function(){
+      emailjs.init("user_V5aUQxtCKbq34knvwWsN4");
+   })();
+</script>
+
+  <!-- =======================================================
+    Theme Name: Reveal
+    Theme URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body id="body">
+
+  <!--==========================
+    Top Bar
+  ============================-->
+  <section id="topbar" class="d-none d-lg-block">
+    <div class="container clearfix">
+      <div class="contact-info float-left">
+        <i class="fa fa-envelope-o"></i> <a href="mailto:support@apilocks.com">support@apilocks.com</a>
+      </div>
+      <div class="social-links float-right">
+         <a href="profile.html"> Profile <i class="fa fa-user fa-2x"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="#body" class="scrollto">api<span>locks</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li  ><a href="home.html">All active user</a></li>
+          <li><a href="alluser.html">All user</a></li>
+           <li ><a href="deactive.html">All deactive user</a></li>
+           <li class="menu-active"><a href="adduser.html">Add user</a></li>
+          <li><a href="login.html" onclick="return confirm('are you sure you want to log out?')">logout</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+    <!--==========================
+      login Section
+    ============================-->
+    <br>
+    <br>
+    <br>
+    <section id="login" class="wow fadeInUp">
+      <div class="container">
+        <div class="form">
+          <div id="sendmessage"><h1>Create API for your users</h1></div>
+          <div id="errormessage"></div>
+          
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email of user" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="pass" id="pass" placeholder="Plugin name"  />
+                <div class="validation"></div>
+              </div>
+            </div>
+            
+            <div class=""><button type="submit"  id="sss">Create API</button></div>
+            <form action="" method="post">
+          </form>
+        </div>
+
+      </div>
+    </section><!-- #contact -->
+
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+  <script src="lib/sticky/sticky.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.5.1/firebase.js"></script>
+  <script>
+ var myData = localStorage['objectToPass'];
+ var myEmail = localStorage['emailTopass'];
+  if (myData=="ok") {
+    window.location = "https://apilocks.com/login.html";
+  }
+  console.log(myEmail);
+  var config = {
+    apiKey: "AIzaSyCGySJf2o5FE1ROmv-CYinDdLREffHjutA",
+    authDomain: "apilocks4584.firebaseapp.com",
+    databaseURL: "https://apilocks4584.firebaseio.com",
+    projectId: "apilocks4584",
+    storageBucket: "apilocks4584.appspot.com",
+    messagingSenderId: "338687853980"
+  };
+  
+   firebase.initializeApp(config);
+
+  
+  document.getElementById("sss").addEventListener("click", function(){
+    var email = document.getElementById('email').value;
+    var password =  document.getElementById('pass').value;
+    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z0-9_\-\.]{2,10})$/;
+    if (reg.test(email) == false){
+      alert('Invalid Email Address');
+    }else{
+    var newPostKey = firebase.database().ref("security").push().key;
+    var pluginn = myData;
+    firebase.database().ref("security/"+newPostKey).set({
+            Api:newPostKey,
+            userID:email,
+            password:password,
+            Plugin:pluginn,
+            timestamp:firebase.database.ServerValue.TIMESTAMP
+        }).then(function(){
+                  var template_params = {
+                   name: newPostKey,
+                   reply_email:email,
+                   ccmail:myEmail,
+                   Plugin:password,
+                   api:'ok'
+                  };
+                emailjs.send("apilocks","apilocks_id",template_params);
+          }).catch(function(){
+                 console.log("remove faild");
+        });
+    
+     if (confirm("User Created")) {
+      document.getElementById('email').value="";
+      document.getElementById('pass').value="";
+     }
+
+    }
+    
+
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+.sortable {
+  table-layout: fixed;
+  width: 100%;
+  text-align: center;
+  align-self: center;
+}
+/* Column widths are based on these cells */
+
+.sortable td {
+  white-space: nowrap;
+  overflow: hidden;
+
+}
+.sortable th {
+  background: #ddd;
+  color: black;
+}
+
+.sortable td,
+.sortable th {
+  text-align: left;
+  padding: 10px 10px;
+}
+.sortable tr:nth-child(even) {
+  background: #f2f2f2;;
+}
+.sortable tr:hover {background-color: #ddd;}
+#wrapper{
+    overflow:auto;
+}
+
+#c1{
+   float:left;
+  
+}
+
+#c2{
+    float:right;
+}​

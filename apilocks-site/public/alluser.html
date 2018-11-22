@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>apilocks</title>
+  
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <script src="sorttable.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</style>
+
+  <!-- =======================================================
+    Theme Name: Reveal
+    Theme URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body id="body">
+
+  <!--==========================
+    Top Bar
+  ============================-->
+  <section id="topbar" class="d-none d-lg-block">
+    <div class="container clearfix">
+      <div class="contact-info float-left">
+        <i class="fa fa-envelope-o"></i> <a href="mailto:support@apilocks.com">support@apilocks.com</a>
+      </div>
+      <div class="social-links float-right">
+         <a href="profile.html"> Profile <i class="fa fa-user fa-2x"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="#body" class="scrollto">api<span>locks</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="home.html">All active user</a></li>
+          <li class="menu-active"><a href="alluser.html">All user</a></li>
+           <li ><a href="deactive.html">All deactive user</a></li>
+           <li ><a href="adduser.html">Add user</a></li>
+          <li><a href="login.html" onclick="return confirm('are you sure you want to log out?')">logout</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+    <!--==========================
+      login Section
+    ============================-->
+    <br>
+    <br>
+    <br>
+    <section id="login" class="wow fadeInUp">
+      <div class="container">
+        <div class="container" style="display: block;" id="hide">
+  <h1>All status user </h1>
+  <div id="wrapper">
+    <div id="c1"><ul>
+    <li>All user</li> 
+    <li>all  active and deactive user list.</li> 
+  </ul></div>
+    <div id="c2">
+      <ul>
+        <li >Search between two date<img title="please select start date 1 " src="img/qq.png" width="20" height="20" style="float:right; cursor: help;"></li>
+        <li>start date <input type="date" id="sdate">End date <input type="date" id="ndate"> <button id="Search">Search</button></li> 
+      </ul>
+      <div id="snackbar" style="display: none;">please select date.</div>
+    </div>
+</div>​
+  <div id="table" class="table-editable">
+   
+    <table class="sortable" id="tablea">
+      <tr>
+        <th class="row-1 row-ID">Email</th>
+        <th class="row-2 row-name">Plugin Name</th>
+        <th class="row-3 row-job">API</th>
+        <th class="row-4 row-email">Date</th>
+        <th class="row-5 row-date">Remove</th>
+      </tr>
+     <!--  <tr>
+    <td contenteditable="true">show mail</td>
+    <td contenteditable="true">show domain</td>
+    <td contenteditable="true">show base name</td>
+    <td contenteditable="true">Expair date</td>
+    <td contenteditable="true">API</td>
+        <td>
+          <span class="table-remove glyphicon glyphicon-remove"></span>
+        </td>
+        <td>
+          <span class="table-up glyphicon glyphicon-arrow-up"></span>
+          <span class="table-down glyphicon glyphicon-arrow-down"></span>
+        </td>
+      </tr> -->
+
+      <!-- This is our clonable table line -->
+    </table>
+  </div>
+  
+  <button id="Alremove" class="btn btn-primary" style="display: block;">Remove</button>
+  <p id="export"></p>
+  <button id="btnExport"  class="btn btn-primary" onclick="javascript:xport.toCSV('tablea');"> Export to CSV</button>
+
+</div>
+  
+      </div>
+    </section><!-- #contact -->
+
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+  <script src="lib/sticky/sticky.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+    <script  src="js1/index.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.5.1/firebase.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script language="JavaScript">
+  var myData = localStorage['objectToPass'];
+   if (myData=="ok") {
+    window.location = "https://apilocks.com/login.html";
+  }
+  console.log(myData);
+    var config = {
+    apiKey: "AIzaSyCGySJf2o5FE1ROmv-CYinDdLREffHjutA",
+    authDomain: "apilocks4584.firebaseapp.com",
+    databaseURL: "https://apilocks4584.firebaseio.com",
+    projectId: "apilocks4584",
+    storageBucket: "apilocks4584.appspot.com",
+    messagingSenderId: "338687853980"
+  };
+  
+   firebase.initializeApp(config);
+  // var y = document.getElementById("hide");
+  // var x = document.getElementById("show");
+
+    var reff = firebase.database().ref('security');
+                reff.on('value',haveData, haveerr);
+                function haveData(datahave){
+                 var existval= datahave.val();
+                 var chabi=Object.keys(existval);
+                 var td=""; 
+                 var txt="";
+                 for(var d2=0;d2< chabi.length;d2++){
+                    var r=chabi[d2];
+                     var exitval3=existval[r].Plugin;
+                     if (exitval3==myData) {
+                       var exitval=existval[r].userID;
+                       var exitval2=existval[r].password;
+                       var exitval4=existval[r].Api;
+                       var exitval5=existval[r].timestamp;
+                       var cdate= new Date(exitval5);
+                       var cyear = cdate.getFullYear();
+                       var cmonth = cdate.getMonth()+1;
+                       var cday = cdate.getDate();
+                       var date=cday+"-"+cmonth+"-"+cyear;
+                       td += '<tr><td contenteditable="true">'+exitval+'</td><td contenteditable="true">'+exitval2+'</td><td contenteditable="true">'+exitval4+'</td><td contenteditable="true">'+date+'</td><td><input type="checkbox" value="'+exitval4+'" id="'+exitval4+'" class="messageCheckbox">Remove</td></tr>';
+
+
+
+
+                     }
+                    
+                    
+                     
+                }
+                  if(td != "")
+                  {
+                     $("#tablea").append(td);
+                  }
+
+                  
+
+
+
+              }
+
+         function haveerr(e){
+         
+         console.log(e);
+         
+            }
+
+    document.getElementById("Alremove").addEventListener("click", function(){
+            var checkedValue = $('.messageCheckbox:checked').val();
+            var setmil="";
+            var setPass="";
+            if (checkedValue=="" || checkedValue==null) {
+              alert("please select row");
+            }else{
+               var setmail = firebase.database().ref('security');
+                setmail.on('value',setData, SetErr);
+                function setData(datahave){
+                 var existval= datahave.val();
+                 var chabi=Object.keys(existval);
+                 var td=""; 
+                 var txt="";
+                 for(var d2=0;d2< chabi.length;d2++){
+                    var r=chabi[d2];
+                     var exitval3=existval[r].Api;
+                     if (exitval3==checkedValue) {
+                        setmil=existval[r].userID;
+                        setPass=existval[r].password;
+                     }  
+                }
+                 
+              }
+
+         function SetErr(e){
+         
+         console.log(e);
+         
+            }
+            console.log(setmil);
+              if (confirm("Are you confirm (If you delete it, you can not recover it)")) {
+
+                var cdate = new Date();
+                var cyear = cdate.getFullYear();
+                var cmonth = cdate.getMonth()+1;
+                var cday = cdate.getDate();
+                console.log(checkedValue);
+                var rem = firebase.database().ref('security/'+checkedValue);
+                var rem2 = firebase.database().ref('securitysublit/'+checkedValue);
+                var rem3 = firebase.database().ref(myData+'/securitysublit/'+checkedValue);
+               rem.remove().then(function(){
+                   location.reload();
+               }).catch(function(){
+                 
+               });
+               rem2.remove().then(function(){
+                   console.log("ok");
+               }).catch(function(){
+                 console.log("remove faild");
+               });
+               rem3.remove().then(function(){
+                    console.log("ok");
+               }).catch(function(){
+                 console.log("remove faild");
+               });
+            firebase.database().ref(myData+'/inactive/'+checkedValue).set({
+              Api:checkedValue,
+              Email:setmil,
+              Plugin:setPass,
+              Year:cyear,
+              mm:cmonth,
+              dd:cday
+
+          });
+            firebase.database().ref('inactive/'+checkedValue).set({
+              Api:checkedValue,
+              Email:setmil,
+              Plugin:setPass,
+              Year:cyear,
+              mm:cmonth,
+              dd:cday
+
+          });
+                  
+            } else {
+         
+             }
+            
+            }
+    });
+
+   document.getElementById("Search").addEventListener("click", function(){
+                      
+                       var sdate=document.getElementById("sdate").value;
+                       var ndate=document.getElementById("ndate").value;
+                        var x = document.getElementById("snackbar");
+                       if (sdate=="" || ndate=="") {
+                           x.style.display = "block";
+                       }else{
+                         x.style.display = "none";
+                        $("#tablea").find("tr:gt(0)").remove();
+                       console.log(ndate);
+                        var bdate= new Date(sdate);
+                         var syear = bdate.getFullYear();
+                         var smonth = bdate.getMonth()+1;
+                         var sday = bdate.getDate();
+                         var ddate= new Date(ndate);
+                         var nyear = ddate.getFullYear();
+                         var nmonth = ddate.getMonth()+1;
+                         var nday = ddate.getDate();
+                       var reff = firebase.database().ref('security');
+                reff.on('value',haveData, haveerr);
+                function haveData(datahave){
+                 var existval= datahave.val();
+                 var chabi=Object.keys(existval);
+                 var td=""; 
+                 var txt="";
+                 for(var d2=0;d2< chabi.length;d2++){
+                    var r=chabi[d2];
+                     var exitval3=existval[r].Plugin;
+                     if (exitval3==myData) {
+                       var exitval=existval[r].userID;
+                       var exitval2=existval[r].password;
+                       var exitval4=existval[r].Api;
+                       var exitval5=existval[r].timestamp;
+                       var cdate= new Date(exitval5);
+                       var cyear = cdate.getFullYear();
+                       var cmonth = cdate.getMonth()+1;
+                       var cday = cdate.getDate();
+                       var date=cday+"-"+cmonth+"-"+cyear;
+                        if (syear<=cyear && smonth<=cmonth && sday<=cday && nyear>=cyear && nmonth>=cmonth && nday>=cday) {
+                       td += '<tr><td contenteditable="true">'+exitval+'</td><td contenteditable="true">'+exitval2+'</td><td contenteditable="true">'+exitval4+'</td><td contenteditable="true">'+date+'</td><td><input type="checkbox" value="'+exitval4+'" id="'+exitval4+'" class="messageCheckbox">Remove</td></tr>';
+
+                     }
+                    
+                    }
+                     
+                   }
+                  if(td != "")
+                  {
+                     $("#tablea").append(td);
+                  }
+
+                  
+
+
+
+              }
+
+         function haveerr(e){
+         
+         console.log(e);
+         
+            }
+
+        }
+                        
+    });
+
+</script>
+
+</body>
+</html>
